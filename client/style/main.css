@@ -13,3 +13,69 @@ body {
 .imagetest {
   background: url('../../assets/cyberman.jpg');
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article{
+  position: relative;
+  float: left;
+  width: 30%;
+  margin-right: 1%;
+  margin-bottom: 0.5em;
+  perspective: 1000px;
+}
+
+.article .headline{
+position: absolute;
+top: 0;
+background: rgba(0, 0, 0, 0.50);
+color: #f1f1f1;
+width: 89%;
+padding: 20px;
+text-align: center;
+visibility: visible;
+opacity: 1
+}
+
+/* .article .summary{
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #f1f1f1;
+  width: 89%;
+  padding: 20px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.article:hover .summary{
+  visibility: visible;
+  opacity: 1
+} */
+
+/* .article:hover .headline{
+  visibility: hidden;
+  opacity: 0;
+} */
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
+.logo{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}

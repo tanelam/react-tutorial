@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 //Basic Article Component
 class Article extends Component {
-  constructor() {
+  constructor(props) {
     super(props);
 
     //initial state
@@ -46,6 +46,9 @@ class Article extends Component {
     console.log('component will unmount');
   }
 
+  handleClick = (event) => {
+    console.log(event.target.link)
+  }
   //this fires every time a prop or state changes
   //to use any prop, use this.props.NAME_OF_PROP
   //use {} to add JS expressions
@@ -53,7 +56,20 @@ class Article extends Component {
   //remember that this is not HTML!!
   //https://reactjs.org/docs/introducing-jsx.html
   render() {
-    return <div>Hello World</div>;
+    const {headline, summary, showSummary, image, link} = this.props;
+
+    const summaryDisplay = showSummary ? <div className="summary">{summary}</div> : "";
+    const imageDisplay =  image ? <img className="article-image" src={image} width="400" height="350"></img> : <img className="no-image" src="https://library.rice.edu/sites/default/files/library-news-images/WSJ.png" width="400" height="350"></img>
+
+  return (
+    <div className="article">
+        <a href={link} target="_blank">{imageDisplay}</a>
+        <div className="headline">
+          <h3>{headline}</h3>
+          {summaryDisplay}
+        </div>
+    </div>
+  )
   }
 };
 
