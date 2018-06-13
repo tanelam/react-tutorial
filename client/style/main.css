@@ -1,5 +1,6 @@
 body {
   background-color: #eee;
+  box-sizing: border-box;
 }
 
 .clicked {
@@ -14,11 +15,11 @@ body {
   background: url('../../assets/cyberman.jpg');
 }
 
-.container {
+/* .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
 .article{
   position: relative;
@@ -26,7 +27,6 @@ body {
   width: 30%;
   margin-right: 1%;
   margin-bottom: 0.5em;
-  perspective: 1000px;
 }
 
 .article .headline{
@@ -34,7 +34,7 @@ position: absolute;
 top: 0;
 background: rgba(0, 0, 0, 0.50);
 color: #f1f1f1;
-width: 89%;
+width: 360px;
 padding: 20px;
 text-align: center;
 visibility: visible;
